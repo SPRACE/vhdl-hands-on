@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
--- Title      : Patter Checker
+-- Title      : Pattern Checker
 -- Project    : 
 -------------------------------------------------------------------------------
 -- File       : pattern-checker.vhd
 -- Author     : Vitor Finotti  <vfinotti@vfinotti-desktop.ncc.unesp.br>
 -- Company    : Sao Paulo Research and Analysis Center,  SPRACE
 -- Created    : 2018-02-08
--- Last update: 2018-02-08
+-- Last update: 2018-02-09
 -- Platform   : 
 -- Standard   : VHDL'93/02
 -------------------------------------------------------------------------------
@@ -34,7 +34,10 @@
 -- 2018-02-08  1.0      vfinotti        Created
 -------------------------------------------------------------------------------
 
-entity patter_checker_top is
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity pattern_checker is
 
     generic (
         g_input_width : natural := 3);  -- num of switches and push-buttons
@@ -42,16 +45,16 @@ entity patter_checker_top is
     port (
         push_buttons_i : in  std_logic_vector(g_input_width-1 downto 0);
         switches_i     : in  std_logic_vector(g_input_width-1 downto 0);
-        led_o          : out std_logic);
+        leds_o         : out std_logic_vector(0 downto 0));
 
-end entity patter_checker_top;
+end entity pattern_checker;
 
-architecture rtl of pattern_checker_top is
+architecture rtl of pattern_checker is
 
 begin  -- architecture rtl
 
-    led_o <=     switches_i(0) and push_buttons_i(0)
-             and switches_i(1) and push_buttons_i(1)
-             and switches_i(2) and push_buttons_i(2);
+    leds_o(0) <=     (switches_i(0) xnor push_buttons_i(0))
+                 and (switches_i(1) xnor push_buttons_i(1))
+                 and (switches_i(2) xnor push_buttons_i(2));
 
 end architecture rtl;
