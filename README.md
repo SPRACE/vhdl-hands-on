@@ -16,6 +16,7 @@ In this this project, the LED will only blink when the push buttons are pressed 
 ### Car Hazard Light
 #### Idea
 The project should emulate a car hazard light. When the switch is turned on, the LED should start blinking at a fixed rate (a suggested rate is two blinks per second).
+**P.S.:** There is a bug in this code. The LED blinks every second, and not two times per second. Can you fix it? ;) 
 
 #### Used Resources
 - Onboard clock source
