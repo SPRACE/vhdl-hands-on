@@ -56,21 +56,6 @@ architecture rtl of car_hazard_light is
 
     signal sys_clk : std_logic := '0';
     signal clk_div : std_logic := '0'; -- divided clock
-
-    -- component clock_divider is
-    --     generic (
-    --         g_clk_div : natural);
-    --     port (
-    --         clk_i : in  std_logic;
-    --         clk_o : out std_logic);
-    -- end component clock_divider;
-
-    -- component clk_gen is
-    --     port (
-    --         sys_clk_p_i : in  std_logic;
-    --         sys_clk_n_i : in  std_logic;
-    --         sys_clk_o   : out std_logic);
-    -- end component clk_gen;
     
 begin  -- architecture rtl
 
