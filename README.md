@@ -15,7 +15,7 @@ In this this project, the LED will only blink when the push buttons are pressed 
 
 ### Car Hazard Light
 #### Idea
-The project should emulate a car hazard light. When the switch is turned on, the LED should start blinking at 1 fixed rate (a suggested rate is one blink per second).
+The project should emulate a car hazard light. When the switch is turned on, the LED should start blinking at a fixed rate (a suggested rate is two blinks per second).
 
 #### Used Resources
 - Onboard clock source
