@@ -4,28 +4,28 @@
 
 
 #sysclk
-set_property PACKAGE_PIN AD11 [get_ports sys_clk_n_i]
-set_property IOSTANDARD LVDS  [get_ports sys_clk_n_i]
-set_property PACKAGE_PIN AD12 [get_ports sys_clk_p_i]
-set_property IOSTANDARD LVDS  [get_ports sys_clk_p_i]
+# set_property PACKAGE_PIN AD11 [get_ports sys_clk_n_i]
+# set_property IOSTANDARD LVDS  [get_ports sys_clk_n_i]
+# set_property PACKAGE_PIN AD12 [get_ports sys_clk_p_i]
+# set_property IOSTANDARD LVDS  [get_ports sys_clk_p_i]
 
 # GPIO LEDs
-set_property PACKAGE_PIN AB8      [get_ports {leds_o[0]}]
-set_property IOSTANDARD LVCMOS15  [get_ports {leds_o[0]}]
-set_property PACKAGE_PIN AA8     [get_ports {leds_o[1]}]
-set_property IOSTANDARD LVCMOS15 [get_ports {leds_o[1]}]
-set_property PACKAGE_PIN AC9     [get_ports {leds_o[2]}]
-set_property IOSTANDARD LVCMOS15 [get_ports {leds_o[2]}]
-set_property PACKAGE_PIN AB9     [get_ports {leds_o[3]}]
-set_property IOSTANDARD LVCMOS15 [get_ports {leds_o[3]}]
-set_property PACKAGE_PIN AE26    [get_ports {leds_o[4]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {leds_o[4]}]
-set_property PACKAGE_PIN G19     [get_ports {leds_o[5]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {leds_o[5]}]
-set_property PACKAGE_PIN E18     [get_ports {leds_o[6]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {leds_o[6]}]
-set_property PACKAGE_PIN F16     [get_ports {leds_o[7]}]
-set_property IOSTANDARD LVCMOS25 [get_ports {leds_o[7]}]
+# set_property PACKAGE_PIN AB8      [get_ports {leds_o[0]}]
+# set_property IOSTANDARD LVCMOS15  [get_ports {leds_o[0]}]
+# set_property PACKAGE_PIN AA8     [get_ports {leds_o[1]}]
+# set_property IOSTANDARD LVCMOS15 [get_ports {leds_o[1]}]
+# set_property PACKAGE_PIN AC9     [get_ports {leds_o[2]}]
+# set_property IOSTANDARD LVCMOS15 [get_ports {leds_o[2]}]
+# set_property PACKAGE_PIN AB9     [get_ports {leds_o[3]}]
+# set_property IOSTANDARD LVCMOS15 [get_ports {leds_o[3]}]
+# set_property PACKAGE_PIN AE26    [get_ports {leds_o[4]}]
+# set_property IOSTANDARD LVCMOS25 [get_ports {leds_o[4]}]
+# set_property PACKAGE_PIN G19     [get_ports {leds_o[5]}]
+# set_property IOSTANDARD LVCMOS25 [get_ports {leds_o[5]}]
+# set_property PACKAGE_PIN E18     [get_ports {leds_o[6]}]
+# set_property IOSTANDARD LVCMOS25 [get_ports {leds_o[6]}]
+# set_property PACKAGE_PIN F16     [get_ports {leds_o[7]}]
+# set_property IOSTANDARD LVCMOS25 [get_ports {leds_o[7]}]
 
 # GPIO DIP SW
 ## SW0
