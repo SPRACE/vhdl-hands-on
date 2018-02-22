@@ -6,7 +6,7 @@
 -- Author     : Vitor Finotti  <vfinotti@vfinotti-desktop.ncc.unesp.br>
 -- Company    : Sao Paulo Research and Analysis Center,  SPRACE
 -- Created    : 2018-02-09
--- Last update: 2018-02-09
+-- Last update: 2018-02-22
 -- Platform   : 
 -- Standard   : VHDL'93/02
 -------------------------------------------------------------------------------
@@ -56,65 +56,12 @@ architecture rtl of sequential_led_blinking is
     type states is (led0, led1, led2, led3, led4, led5, led6, led7);
     signal present_state : states := led0;
 
-    signal sys_clk : std_logic := '0';
-    signal clk_div : std_logic := '0';
-
-    signal leds : std_logic_vector(g_num_leds-1 downto 0) := "00000000";
+    -- INSERT YOUR SIGNALS HERE
 
 begin  -- architecture rtl
 
-    clk_gen_1 : entity work.clk_gen
-        port map (
-            sys_clk_p_i => sys_clk_p_i,
-            sys_clk_n_i => sys_clk_n_i,
-            sys_clk_o   => sys_clk);
+    -- DECLARE YOUR COMPONENTS HERE
 
-    clock_divider_1 : entity work.clock_divider
-        generic map (
-            g_clk_div => g_clk_div)
-        port map (
-            clk_i => sys_clk,
-            clk_o => clk_div);
-
-    -- State machine to blink one LED per state
-    -- type   : sequential
-    -- inputs : clk_div
-    -- outputs: leds_o
-    fsm_sequence : process (clk_div) is
-    begin  -- process fsm_sequence
-        if rising_edge(clk_div) then    -- rising clock edge
-            case present_state is
-                when led0 =>
-                    present_state <= led1;
-                    leds          <= "01000000";
-                when led1 =>
-                    present_state <= led2;
-                    leds          <= "00100000";
-                when led2 =>
-                    present_state <= led3;
-                    leds          <= "00010000";
-                when led3 =>
-                    present_state <= led4;
-                    leds          <= "00001000";
-                when led4 =>
-                    present_state <= led5;
-                    leds          <= "00000100";
-                when led5 =>
-                    present_state <= led6;
-                    leds          <= "00000010";
-                when led6 =>
-                    present_state <= led7;
-                    leds          <= "00000001";
-                when led7 =>
-                    present_state <= led0;
-                    leds          <= "10000000";
-                when others =>
-                    present_state <= led0;
-                    leds          <= "10000000";
-            end case;
-        end if;
-
-        leds_o <= leds;
-    end process fsm_sequence;
+    -- INSERT YOUR PROCESS HERE
 
 end architecture rtl;

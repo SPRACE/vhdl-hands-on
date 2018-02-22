@@ -6,7 +6,7 @@
 -- Author     : Vitor Finotti  <vfinotti@vfinotti-desktop.ncc.unesp.br>
 -- Company    : Sao Paulo Research and Analysis Center,  SPRACE
 -- Created    : 2018-02-09
--- Last update: 2018-02-09
+-- Last update: 2018-02-22
 -- Platform   : 
 -- Standard   : VHDL'93/02
 -------------------------------------------------------------------------------
@@ -54,24 +54,10 @@ end entity car_hazard_light;
 
 architecture rtl of car_hazard_light is
 
-    signal sys_clk : std_logic := '0';
-    signal clk_div : std_logic := '0'; -- divided clock
+    -- DECLARE THE SIGNALS HERE
     
 begin  -- architecture rtl
 
-    clk_gen_1: entity work.clk_gen
-        port map (
-            sys_clk_p_i    => sys_clk_p_i,
-            sys_clk_n_i    => sys_clk_n_i,
-            sys_clk_o      => sys_clk);
-    
-    clock_divider_1: entity work.clock_divider
-        generic map (
-            g_clk_div => g_clk_div)
-        port map (
-            clk_i => sys_clk,
-            clk_o => clk_div);
-
-    leds_o(0) <= clk_div and switches_i(0);
+    -- INSERT YOUR CODE HERE!
 
 end architecture rtl;

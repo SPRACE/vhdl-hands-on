@@ -6,7 +6,7 @@
 -- Author     : André Cascadan
 -- Company    : Sao Paulo Research and Analysis Center,  SPRACE
 -- Created    : 2018-02-15
--- Last update: 2018-02-15
+-- Last update: 2018-02-22
 -- Platform   : 
 -- Standard   : VHDL'93/02
 -------------------------------------------------------------------------------
@@ -65,41 +65,11 @@ architecture Behavioral of counter is
     signal button_dly : std_logic;
     signal counter : std_logic_vector(3 downto 0):="0000";
 
-begin
+Begin
 
-    clk_gen_1 : entity work.clk_gen
-        port map (
-            sys_clk_p_i => sys_clk_p_i,
-            sys_clk_n_i => sys_clk_n_i,
-            sys_clk_o   => sys_clk
-        );
 
-    debouncer_1 : entity work.debouncer
-        generic map (
-            g_period => 1e6
-        )
-        port map (
-            clk_i    =>  sys_clk,
-            button_i =>  push_buttons_i(0),
-            button_o =>  button
-        ); 
+    -- DECLARE YOUR COMPONENTS HERE
 
-        
-    process (sys_clk) is
-    begin
-    
-        if rising_edge(sys_clk) then
-            
-            button_dly <= button;
-            
-            if ((button and (not button_dly)) = '1') then
-                counter <= std_logic_vector(unsigned(counter) + 1);
-            end if;
-        
-        end if;
-        
-    end process;       
-
-    leds_o <= counter;
+    -- INSERT YOUR CODE HERE
 
 end Behavioral;

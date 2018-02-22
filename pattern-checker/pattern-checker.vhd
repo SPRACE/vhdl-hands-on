@@ -6,7 +6,7 @@
 -- Author     : Vitor Finotti  <vfinotti@vfinotti-desktop.ncc.unesp.br>
 -- Company    : Sao Paulo Research and Analysis Center,  SPRACE
 -- Created    : 2018-02-08
--- Last update: 2018-02-09
+-- Last update: 2018-02-22
 -- Platform   : 
 -- Standard   : VHDL'93/02
 -------------------------------------------------------------------------------
@@ -53,8 +53,6 @@ architecture rtl of pattern_checker is
 
 begin  -- architecture rtl
 
-    leds_o(0) <=     (switches_i(0) xnor push_buttons_i(0))
-                 and (switches_i(1) xnor push_buttons_i(1))
-                 and (switches_i(2) xnor push_buttons_i(2));
+    -- INSERT YOUR CODE HERE!
 
 end architecture rtl;
